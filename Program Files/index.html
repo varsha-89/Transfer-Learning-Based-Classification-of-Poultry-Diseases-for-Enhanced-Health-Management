@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Poultry Disease Classifier</title>
+</head>
+<body style="text-align: center; padding-top: 40px; font-family: Arial;">
+    <h1>Poultry Disease Classifier</h1>
+    <form action="/" method="post" enctype="multipart/form-data">
+        <input type="file" name="file" required><br><br>
+        <input type="submit" value="Predict">
+    </form>
+    {% if prediction %}
+    <h2>Prediction: {{ prediction }}</h2>
+    <img src="{{ image_path }}" alt="Uploaded Image" width="300">
+    {% endif %}
+</body>
+</html>
